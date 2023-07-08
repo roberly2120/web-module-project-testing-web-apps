@@ -21,8 +21,8 @@ const ContactForm = () => {
   const [errors, setErrors] = useState(errorData);
 
   const errorHandling = (fieldName, fieldValue) => {
-    if (fieldName === "firstName" && fieldValue.length < 5)
-      return `${fieldName} must have at least 5 characters.`;
+    if (fieldName === "firstName" && fieldValue.length < 4)
+      return `${fieldName} must have at least 4 characters.`;
 
     const emailRegex = /(.*)@(.*)\.(.+)/g;
     if (fieldName === "email" && !fieldValue.match(emailRegex))
